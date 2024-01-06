@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FaHeart, FaRegHeart } from 'react-icons/fa';
 import { postedAt } from '../utils';
+import Image from './styled/Image';
 
 function TalkDetail({
   id, text, createdAt, likes, user, authUser, likeTalk,
@@ -11,7 +12,7 @@ function TalkDetail({
   return (
     <section className="talk-detail">
       <header>
-        <img src={user.photo} alt={user} />
+        <Image src={user.photo} width="50px" borderRadius="50%" alt={user.name} />
         <div className="talk-detail__user-info">
           <p className="talk-detail__user-name">{user.name}</p>
           <p className="talk-detail__user-id">

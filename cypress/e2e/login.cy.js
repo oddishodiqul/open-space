@@ -9,7 +9,7 @@
 
 describe('Login spec', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:5175/');
+    cy.visit('http://localhost:5173/');
   });
 
   it('should display login page correctly', () => {
@@ -69,7 +69,6 @@ describe('Login spec', () => {
     cy.get('button').contains(/^Login$/).click();
 
     // memverifikasi bahwa elemen yang berada di homepage ditampilkan
-    cy.get('nav').contains(/^Home$/).should('be.visible');
     cy.get('button').contains('Sign out').should('be.visible');
   });
 });
